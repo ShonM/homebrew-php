@@ -30,8 +30,6 @@ class Php52 < AbstractPhp
       defaults << "--with-mysql=#{Formula.factory('mysql').prefix}/bin/mysql_config"
       defaults << "--with-pdo-mysql=#{Formula.factory('mysql').prefix}/bin/mysql_config"
     end
-    
-    raise "Pthreads are only compatible with 5.3 and 5.4" if build.include? 'with-pthreads'
 
     defaults + [
       "--enable-zend-multibyte",
